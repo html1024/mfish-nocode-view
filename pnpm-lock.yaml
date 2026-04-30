@@ -27,6 +27,9 @@ catalogs:
     '@purge-icons/generated':
       specifier: ^0.10.0
       version: 0.10.0
+    '@rollup/plugin-terser':
+      specifier: ^0.4.4
+      version: 0.4.4
     '@rushstack/eslint-patch':
       specifier: ^1.16.1
       version: 1.16.1
@@ -924,6 +927,9 @@ importers:
 
   packages/custom-api:
     devDependencies:
+      '@rollup/plugin-terser':
+        specifier: 'catalog:'
+        version: 0.4.4(rollup@4.60.2)
       vite-plugin-css-injected-by-js:
         specifier: 'catalog:'
         version: 4.0.1(vite@7.3.2(@types/node@25.6.0)(jiti@2.6.1)(less@4.6.4)(lightningcss@1.32.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3))
@@ -934,12 +940,24 @@ importers:
         specifier: ^0.576.0
         version: 0.576.0(vue@3.5.32(typescript@6.0.2))
     devDependencies:
+      '@rollup/plugin-terser':
+        specifier: 'catalog:'
+        version: 0.4.4(rollup@4.60.2)
+      '@unocss/preset-wind3':
+        specifier: 'catalog:'
+        version: 66.6.8
+      unocss:
+        specifier: 'catalog:'
+        version: 66.6.8(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(vite@7.3.2(@types/node@25.6.0)(jiti@2.6.1)(less@4.6.4)(lightningcss@1.32.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3))
       vite-plugin-css-injected-by-js:
         specifier: 'catalog:'
         version: 4.0.1(vite@7.3.2(@types/node@25.6.0)(jiti@2.6.1)(less@4.6.4)(lightningcss@1.32.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3))
 
   packages/nocode:
     devDependencies:
+      '@rollup/plugin-terser':
+        specifier: 'catalog:'
+        version: 0.4.4(rollup@4.60.2)
       vite-plugin-css-injected-by-js:
         specifier: 'catalog:'
         version: 4.0.1(vite@7.3.2(@types/node@25.6.0)(jiti@2.6.1)(less@4.6.4)(lightningcss@1.32.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3))
@@ -968,9 +986,18 @@ importers:
         specifier: ^0.8.5
         version: 0.8.5
     devDependencies:
+      '@rollup/plugin-terser':
+        specifier: 'catalog:'
+        version: 0.4.4(rollup@4.60.2)
       '@types/dagre':
         specifier: ^0.7.54
         version: 0.7.54
+      '@unocss/preset-wind3':
+        specifier: 'catalog:'
+        version: 66.6.8
+      unocss:
+        specifier: 'catalog:'
+        version: 66.6.8(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(vite@7.3.2(@types/node@25.6.0)(jiti@2.6.1)(less@4.6.4)(lightningcss@1.32.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3))
       vite-plugin-css-injected-by-js:
         specifier: 'catalog:'
         version: 4.0.1(vite@7.3.2(@types/node@25.6.0)(jiti@2.6.1)(less@4.6.4)(lightningcss@1.32.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3))
@@ -2436,6 +2463,15 @@ packages:
 
   '@rollup/plugin-replace@6.0.3':
     resolution: {integrity: sha512-J4RZarRvQAm5IF0/LwUUg+obsm+xZhYnbMXmXROyoSE1ATJe3oXSb9L5MMppdxP2ylNSjv6zFBwKYjcKMucVfA==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      rollup: ^4.60.2
+    peerDependenciesMeta:
+      rollup:
+        optional: true
+
+  '@rollup/plugin-terser@0.4.4':
+    resolution: {integrity: sha512-XHeJC5Bgvs8LfukDwWZp7yeqin6ns8RTl2B9avbejt6tZqsqvVoWI7ZTQrcNsfKEDWBTnTxM8nMDkO2IFFbd0A==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       rollup: ^4.60.2
@@ -6672,6 +6708,9 @@ packages:
   queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
 
+  randombytes@2.1.0:
+    resolution: {integrity: sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==}
+
   read-pkg-up@1.0.1:
     resolution: {integrity: sha512-WD9MTlNtI55IwYUS27iHh9tK3YoIVhxis8yKhLpTqWtml739uXc9NWTpxoHkfZf3+DkCCsXox94/VWZniuZm6A==}
     engines: {node: '>=0.10.0'}
@@ -6949,6 +6988,9 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
+  serialize-javascript@6.0.2:
+    resolution: {integrity: sha512-Saa1xPByTTq2gdeFZYLLo+RFE35NHZkAbqZeWNd3BpzppeVisAqpDjcp8dyf6uIvEqJRd46jemmyA4iFIeVk8g==}
+
   set-blocking@2.0.0:
     resolution: {integrity: sha512-KiKBS8AnWGEyLzofFfmvKwpdPzqiy16LvQfK3yv/fVH7Bj13/wl3JSR1J+rfgRE9q7xUJK4qvgS8raSOeLUehw==}
 
@@ -7028,6 +7070,10 @@ packages:
 
   sm-crypto@0.3.14:
     resolution: {integrity: sha512-sR7NuGAJH93Om8keAF2/rj1EqFzEiUey4aKGyDo3nQ2BiVqhgq8UkiIoIp5qhV9w4pG7qArhfqyewcG8AbhXbg==}
+
+  smob@1.6.1:
+    resolution: {integrity: sha512-KAkBqZl3c2GvNgNhcoyJae1aKldDW0LO279wF9bk1PnluRTETKBq0WyzRXxEhoQLk56yHaOY4JCBEKDuJIET5g==}
+    engines: {node: '>=20.0.0'}
 
   snapdragon-node@2.1.1:
     resolution: {integrity: sha512-O27l4xaMYt/RSQ5TR3vpWCAB5Kb/czIcqUFOM/C4fYcLnbZUc1PkjTAMjof2pBWaSTwOUd6qUHcFGVGj7aIwnw==}
@@ -9493,6 +9539,14 @@ snapshots:
     dependencies:
       '@rollup/pluginutils': 5.3.0(rollup@4.60.2)
       magic-string: 0.30.21
+    optionalDependencies:
+      rollup: 4.60.2
+
+  '@rollup/plugin-terser@0.4.4(rollup@4.60.2)':
+    dependencies:
+      serialize-javascript: 6.0.2
+      smob: 1.6.1
+      terser: 5.46.1
     optionalDependencies:
       rollup: 4.60.2
 
@@ -14307,6 +14361,10 @@ snapshots:
 
   queue-microtask@1.2.3: {}
 
+  randombytes@2.1.0:
+    dependencies:
+      safe-buffer: 5.2.1
+
   read-pkg-up@1.0.1:
     dependencies:
       find-up: 1.1.2
@@ -14625,6 +14683,10 @@ snapshots:
 
   semver@7.7.4: {}
 
+  serialize-javascript@6.0.2:
+    dependencies:
+      randombytes: 2.1.0
+
   set-blocking@2.0.0: {}
 
   set-function-length@1.2.2:
@@ -14721,6 +14783,8 @@ snapshots:
   sm-crypto@0.3.14:
     dependencies:
       jsbn: 1.1.0
+
+  smob@1.6.1: {}
 
   snapdragon-node@2.1.1:
     dependencies:

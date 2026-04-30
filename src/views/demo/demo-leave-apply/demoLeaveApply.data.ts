@@ -19,7 +19,10 @@ export const columns: BasicColumn[] = [
   {
     title: "请假类型",
     dataIndex: "leaveType",
-    width: 120
+    width: 120,
+    customRender: ({ record }) => {
+      return h(Tag, {}, () => (record.leaveType === 1 ? "事假" : record.leaveType === 2 ? "病假" : "年假"));
+    }
   },
   {
     title: "开始时间",
